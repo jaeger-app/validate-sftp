@@ -58,4 +58,14 @@ class ConnectTest extends \PHPUnit_Framework_TestCase
         ));
         $this->assertFALSE($val->hasErrors());
     }
+
+    /**
+     * The SFTP Test Credentials
+     *
+     * @return array
+     */
+    protected function getSftpCreds()
+    {
+        return include 'data/sftpcreds.config.php';
+    } 
 }
