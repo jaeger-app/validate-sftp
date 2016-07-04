@@ -3,8 +3,8 @@
 	"description": "An SFTP/SSH validation library for Jaeger Validate",
 	"require": {
 		"php": ">=5.4.0",
-		"jaeger-app/validate": "dev-master",
-		"jaeger-app/remote-sftp": "dev-master"
+		"jaeger-app/validate": "^0.1",
+		"jaeger-app/remote-sftp": "^0.1"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "4.*"
