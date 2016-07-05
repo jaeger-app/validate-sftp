@@ -13,7 +13,6 @@
 		"name": "Eric Lamb",
 		"email": "eric@mithra62.com"
 	}],
-	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
