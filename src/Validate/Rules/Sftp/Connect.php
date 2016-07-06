@@ -63,12 +63,15 @@ class Connect extends AbstractRule
             }
             
             $filesystem = new Remote(Sftp::getRemoteClient($params));
-            if (! $filesystem->getAdapter()->listContents()) {
-                return false;
+            $return = true;
+            $filesystem->getAdapter()->listContents();
+            if (! $filesystem->getAdapter()->isConnected()) {
+                $return = false;
             }
             
             $filesystem->getAdapter()->disconnect();
-            return true;
+            return $return;       
+            
         } catch (\Exception $e) {
             return false;
         }

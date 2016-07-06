@@ -40,7 +40,7 @@ class WritableTest extends \PHPUnit_Framework_TestCase
         $val = new Validate();
         $creds = $this->getSftpCreds();
         $creds['sftp_root'] = '/fdsafdsa';
-        $val->rule('sftp_writable', 'connection_field', $creds)->val(array(
+        @$val->rule('sftp_writable', 'connection_field', $creds)->val(array(
             'connection_field' => 'Foo'
         ));
         $this->assertTrue($val->hasErrors());
@@ -52,7 +52,7 @@ class WritableTest extends \PHPUnit_Framework_TestCase
     public function testRuleSuccess()
     {
         $val = new Validate();
-        $val->rule('sftp_writable', 'connection_field', $this->getSftpCreds())
+        @$val->rule('sftp_writable', 'connection_field', $this->getSftpCreds())
             ->val(array(
             'connection_field' => 'Foo'
         ));
