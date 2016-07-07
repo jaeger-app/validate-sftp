@@ -17,7 +17,11 @@
 	"autoload": {
 		"psr-4": {
 			"JaegerApp\\": "src"
-		}
+		},
+		"files": [
+			"src/Validate/Rules/Sftp/Connect.php",
+			"src/Validate/Rules/Sftp/Writable.php"
+		]
 	},
 	"license": "MIT"
 }
